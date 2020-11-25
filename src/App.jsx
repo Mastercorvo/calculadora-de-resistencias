@@ -115,7 +115,7 @@ function App() {
 
           <div className="selector">
 
-            <h1>Banda numero: #{currentBanda}</h1>
+            <h1>Resistor de {countBand === 1?4:5} Bandas</h1>
 
             <div className="selector-resistor">
 
@@ -128,11 +128,11 @@ function App() {
                 {gridTemplateColumns:'repeat(' + (countBand === 1 ?4:5) + ', 1fr)'}
               }>
 
-              <button className={"banda-1 "+currentBanda === 1?'current':''} onClick={()=> setCurrentBanda(1)}>Banda #1</button>
-              <button className={"banda-1 "+currentBanda === 2?'current':''} onClick={()=> setCurrentBanda(2)}>Banda #2</button>
-              <button className={"banda-1 "+currentBanda === 3?'current':''} onClick={()=> setCurrentBanda(3)}>Banda #3</button>
-              <button className={"banda-1 "+currentBanda === 4?'current':''} onClick={()=> setCurrentBanda(4)}>Banda #4</button>
-              {countBand === 2 && <button className={"banda-1 "+currentBanda === 5?'current':''} onClick={()=> setCurrentBanda(5)}>Banda #5</button>}
+              <button className={"banda-1 " + (currentBanda === 1?'current':'')} onClick={()=> setCurrentBanda(1)}>Banda #1</button>
+              <button className={"banda-2 " + (currentBanda === 2?'current':'')} onClick={()=> setCurrentBanda(2)}>Banda #2</button>
+              <button className={"banda-3 " + (currentBanda === 3?'current':'')} onClick={()=> setCurrentBanda(3)}>Banda #3</button>
+              <button className={"banda-4 " + (currentBanda === 4?'current':'')} onClick={()=> setCurrentBanda(4)}>Banda #4</button>
+              {countBand === 2 && <button className={"banda-5 " + (currentBanda === 5?'current':'')} onClick={()=> setCurrentBanda(5)}>Banda #5</button>}
 
             </div>
 

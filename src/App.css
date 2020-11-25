@@ -17,6 +17,18 @@ button{
 
   cursor: pointer;
 
+  font-weight: bold;
+
+  font-family: sans-serif;
+
+  outline: none;
+
+}
+
+button:active{
+
+  outline: none;
+
 }
 
 .main{
@@ -36,6 +48,32 @@ button{
 .main h1{
 
   width: max-content;
+
+  text-decoration-line: underline;
+
+}
+
+.selector-resistor{
+
+  display: grid;
+
+  width: 100%;
+
+  grid-template-columns: repeat(2, 1fr);
+
+  height: 60px;
+
+  gap: 5px;
+
+}
+
+.selector-resistor button{
+
+  border: none;
+
+  background-color: gray;
+
+  font-size: 1.4em;
 
 }
 
@@ -60,6 +98,16 @@ button{
   border-radius: 0;
 
   background-color: goldenrod;
+
+  font-size: 1.1em;
+
+}
+
+.selector-banda .current{
+
+  transform: scale(0.95);
+
+  filter: brightness(0.8);
 
 }
 

@@ -33,8 +33,6 @@ button:active{
 
 .main{
 
-  height: 500px;
-
   display: flex;
 
   flex-direction: column;
@@ -50,6 +48,12 @@ button:active{
   width: max-content;
 
   text-decoration-line: underline;
+
+}
+
+.main h2{
+
+  height: 1em;
 
 }
 
@@ -230,6 +234,6 @@ button:active{
 
   width: 400px;
 
-  height: 400px;
+  height: 250px;
 
 }

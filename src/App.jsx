@@ -40,7 +40,7 @@ const R2 = {
 function App() {
 
   const [currentBanda, setCurrentBanda] = useState(1);
-  const [bandas, setBandas] = useState([]);
+  const [bandas, setBandas] = useState([0, 0, 0, 0]);
 
   const [countBand, setCountBand] = useState(1);
 
@@ -71,7 +71,8 @@ function App() {
 
     }
 
-  })
+  // eslint-disable-next-line react-hooks/exhaustive-deps
+  }, [bandas])
 
   function colorHandler(color){
 
@@ -104,6 +105,16 @@ function App() {
   }
 
   function countBandHandler(band){
+
+    if(band !== countBand) {
+    
+      setBandas([0, 0, 0, 0]);
+
+      setCurrentBanda(1);
+
+      setResistenciaResultante('');
+    
+    }
 
     setCountBand(band);
 
